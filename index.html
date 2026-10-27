@@ -1403,6 +1403,327 @@
       color: var(--ink-soft);
     }
 
+    /* Modal Step & QR / UPI Styles */
+    .step-indicator {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(185, 139, 55, 0.12);
+      border: 1px solid rgba(185, 139, 55, 0.3);
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .payment-notice-banner {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #FFF9EB;
+      border: 1px solid rgba(185, 139, 55, 0.45);
+      border-radius: var(--radius);
+      padding: 11px 13px;
+      margin-bottom: 14px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: #5A4010;
+    }
+
+    .payment-notice-banner .notice-icon {
+      font-size: 18px;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    .payment-notice-banner strong {
+      display: block;
+      color: #3D2B05;
+      margin-bottom: 2px;
+      font-size: 13px;
+    }
+
+    .payment-notice-banner p {
+      margin: 0;
+      color: #6B4E15;
+    }
+
+    .registrant-badge {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--paper-dim);
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      padding: 8px 12px;
+      margin-bottom: 14px;
+      font-size: 12.5px;
+      color: var(--ink);
+    }
+
+    .btn-edit-link {
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0;
+    }
+
+    .qr-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 16px 14px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 14px;
+    }
+
+    .qr-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .qr-frame {
+      display: inline-flex;
+      padding: 6px;
+      background: #ffffff;
+      border: 2px solid var(--paper-dim);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      max-width: 250px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .qr-frame img {
+      display: block;
+      width: 100%;
+      max-width: 235px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .qr-amount-badge {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .qr-amount-badge b {
+      color: var(--sage);
+      font-size: 18px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .upi-app-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 12px 0;
+    }
+
+    .upi-badge {
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--paper-dim);
+      color: var(--ink-soft);
+      border: 1px solid var(--line-subtle);
+    }
+
+    .upi-copy-container {
+      display: flex;
+      align-items: stretch;
+      background: var(--paper-dim);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .upi-id-box {
+      flex: 1;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      overflow: hidden;
+    }
+
+    .upi-id-label {
+      font-weight: 600;
+      color: var(--ink-soft);
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .upi-id-value {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .btn-copy-upi {
+      background: var(--ink);
+      color: #ffffff;
+      border: none;
+      padding: 0 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: background-color .15s ease, transform .1s ease;
+      white-space: nowrap;
+    }
+
+    .btn-copy-upi:hover {
+      background: #0d2b24;
+    }
+
+    .btn-copy-upi:active {
+      transform: scale(0.97);
+    }
+
+    .btn-copy-upi.copied {
+      background: var(--sage);
+    }
+
+    .btn-direct-upi {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 10px;
+      padding: 11px 14px;
+      background: #0d2b24;
+      color: #ffffff;
+      border-radius: var(--radius);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color .2s;
+    }
+
+    .btn-direct-upi:hover {
+      background: #174238;
+      color: #ffffff;
+    }
+
+    .instruction-box {
+      background: var(--paper-dim);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .inst-heading {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .inst-step {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--charcoal);
+    }
+
+    .inst-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .inst-num {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .inst-text strong {
+      color: var(--ink);
+    }
+
+    .btn-whatsapp-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: transform .15s ease, box-shadow .15s ease;
+      font-family: inherit;
+    }
+
+    .btn-whatsapp-action:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-whatsapp-action:active {
+      transform: translateY(0);
+    }
+
+    .btn-text-back {
+      background: none;
+      border: none;
+      color: var(--ink-soft);
+      font-size: 12.5px;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 6px;
+      display: inline-block;
+    }
+
+    .btn-text-back:hover {
+      color: var(--ink);
+    }
+
     /* ===== FAQ ===== */
     .faq-item {
       border-bottom: 1px solid var(--line);
@@ -3740,75 +4061,167 @@
       aria-label="Reserve Seat for ₹199">Reserve Seat</button>
   </div>
 
-  <!-- ===== REGISTRATION MODAL ===== -->
+  <!-- ===== REGISTRATION & PAYMENT MODAL ===== -->
   <div class="modal-backdrop" id="reserveModal" onclick="closeReserveModalOnBackdrop(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeReserveModal()">&times;</button>
-      <div class="modal-header">
-        <h3 class="gu">Reserve Your Seat</h3>
-        <p class="gu">Money Clarity Live Masterclass • 01-Nov 2026, 10:30 AM • ₹199</p>
+
+      <!-- STEP 1: Registration Form -->
+      <div id="modalStep1">
+        <div class="modal-header">
+          <div class="step-indicator">સ્ટેપ ૧/૨ • તમારી નોંધણી</div>
+          <h3 class="gu">Reserve Your Seat</h3>
+          <p class="gu">Money Clarity Live Masterclass • 01-Nov 2026, 10:30 AM • ₹199</p>
+        </div>
+        <form id="regForm" onsubmit="handleRegistration(event)">
+          <div class="form-group">
+            <label class="gu" for="userName">તમારું પૂરું નામ (Full Name) *</label>
+            <input type="text" id="userName" required placeholder="દા.ત. ભાવિક પટેલ">
+          </div>
+          <div class="form-group">
+            <label class="gu" for="userPhone">WhatsApp નંબર *</label>
+            <input type="tel" id="userPhone" required placeholder="દા.ત. 98765 43210" pattern="[0-9\s\+\-]{10,15}"
+              title="Please enter 10 digit mobile number">
+          </div>
+          <div class="form-group">
+            <label class="gu" for="userEmail">ઇમેઇલ એડ્રેસ (Email Address) *</label>
+            <input type="email" id="userEmail" required placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <label class="gu" for="userRole">તમારો વ્યવસાય (Profession)</label>
+            <select id="userRole">
+              <option value="salaried">Salaried Corporate / IT Professional</option>
+              <option value="business">Business Owner / Entrepreneur</option>
+              <option value="professional">Doctor / CA / Consultant / Lawyer</option>
+              <option value="freelancer">Freelancer / Creator</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="order-summary-box">
+            <div class="summary-line">
+              <span>Date & Time</span>
+              <span style="font-weight:600; color:var(--ink);">01-Nov 2026, 10:30 AM</span>
+            </div>
+            <div class="summary-line">
+              <span>Masterclass Entry Pass (Live 90 Mins)</span>
+              <span class="mono">₹199</span>
+            </div>
+            <div class="summary-line">
+              <span>Included: Worksheets & Planner</span>
+              <span style="color:var(--sage); font-weight:600;">FREE</span>
+            </div>
+            <div class="summary-line">
+              <span>Q&A Session Access</span>
+              <span style="color:var(--sage); font-weight:600;">FREE</span>
+            </div>
+            <div class="summary-line total">
+              <span>Total Payable Amount</span>
+              <span class="mono">₹199</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary modal-submit">આગળ વધો (Go to Payment ₹199) →</button>
+
+          <div class="secure-logos">
+            <span>🔒 Direct UPI & QR Verification</span>
+            <span>•</span>
+            <span>PhonePe / GPay / Paytm</span>
+          </div>
+        </form>
       </div>
-      <form id="regForm" onsubmit="handleRegistration(event)">
-        <div class="form-group">
-          <label class="gu" for="userName">તમારું પૂરું નામ (Full Name) *</label>
-          <input type="text" id="userName" required placeholder="દા.ત. ભાવિક પટેલ">
-        </div>
-        <div class="form-group">
-          <label class="gu" for="userPhone">WhatsApp નંબર *</label>
-          <input type="tel" id="userPhone" required placeholder="દા.ત. 98765 43210" pattern="[0-9\s\+\-]{10,15}"
-            title="Please enter 10 digit mobile number">
-        </div>
-        <div class="form-group">
-          <label class="gu" for="userEmail">ઇમેઇલ એડ્રેસ (Email Address) *</label>
-          <input type="email" id="userEmail" required placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-          <label class="gu" for="userRole">તમારો વ્યવસાય (Profession)</label>
-          <select id="userRole">
-            <option value="salaried">Salaried Corporate / IT Professional</option>
-            <option value="business">Business Owner / Entrepreneur</option>
-            <option value="professional">Doctor / CA / Consultant / Lawyer</option>
-            <option value="freelancer">Freelancer / Creator</option>
-            <option value="other">Other</option>
-          </select>
+
+      <!-- STEP 2: QR Code, UPI ID & WhatsApp Screenshot Confirmation -->
+      <div id="modalStep2" style="display:none;">
+        <div class="modal-header" style="margin-bottom:10px;">
+          <div class="step-indicator">સ્ટેપ ૨/૨ • પેમેન્ટ & સીટ કન્ફર્મેશન</div>
+          <h3 class="gu" style="font-size:20px; margin-bottom:4px;">Scan QR & Complete Payment</h3>
+          <p class="gu" style="margin-bottom:8px; font-size:13px;">₹199 ચૂકવીને WhatsApp પર Screenshot શેર કરો</p>
         </div>
 
-        <div class="order-summary-box">
-          <div class="summary-line">
-            <span>Date & Time</span>
-            <span style="font-weight:600; color:var(--ink);">01-Nov 2026, 10:30 AM</span>
-          </div>
-          <div class="summary-line">
-            <span>Masterclass Entry Pass (Live 90 Mins)</span>
-            <span class="mono">₹199</span>
-          </div>
-          <div class="summary-line">
-            <span>Included: Worksheets & Planner</span>
-            <span style="color:var(--sage); font-weight:600;">FREE</span>
-          </div>
-          <div class="summary-line">
-            <span>Q&A Session Access</span>
-            <span style="color:var(--sage); font-weight:600;">FREE</span>
-          </div>
-          <div class="summary-line total">
-            <span>Total Payable Amount</span>
-            <span class="mono">₹199</span>
+        <!-- Payment Gateway Notice / Reason -->
+        <div class="payment-notice-banner">
+          <div class="notice-icon">ℹ️</div>
+          <div class="notice-body">
+            <strong>પેમેન્ટ સૂચના (Important Notice):</strong>
+            <p>પેમેન્ટ ગેટવે અપડેટને લીધે સીધા PhonePe, Google Pay, Paytm અથવા કોઈપણ UPI એપ/QR કોડ દ્વારા ₹199 સ્વીકારવામાં આવે છે. પેમેન્ટ પૂર્ણ થયા પછી <strong>Screenshot WhatsApp પર મોકલવો જરૂરી છે</strong> જેથી તમારી સીટ તાત્કાલિક કન્ફર્મ થઈ શકે.</p>
           </div>
         </div>
 
-        <button type="submit" class="btn-primary modal-submit">Proceed to Pay ₹199</button>
-
-        <div class="secure-logos">
-          <span>🔒 256-Bit SSL Encrypted</span>
-          <span>•</span>
-          <span>UPI / GPay / Cards</span>
+        <!-- Participant details tag -->
+        <div class="registrant-badge">
+          <span>વિગત: <b id="summaryUserName">-</b> | 📞 <span id="summaryUserPhone">-</span></span>
+          <button type="button" class="btn-edit-link" onclick="goToStep1()">સુધારો ✎</button>
         </div>
-      </form>
+
+        <!-- QR Code Card -->
+        <div class="qr-card">
+          <div class="qr-tag">Indian Bank • Scan with Any UPI App</div>
+          <div class="qr-frame">
+            <img id="upiQrImage" src="indian-bank-qr.png" alt="Indian Bank UPI Payment QR Code - Mr PARTH BHUPATBHAI KHATRA" width="235" height="235" loading="eager" />
+          </div>
+          <div class="qr-amount-badge">ચુકવણી રકમ: <b>₹199</b></div>
+
+          <!-- Supported UPI Badges -->
+          <div class="upi-app-badges">
+            <span class="upi-badge">PhonePe</span>
+            <span class="upi-badge">Google Pay</span>
+            <span class="upi-badge">Paytm</span>
+            <span class="upi-badge">BHIM / CRED</span>
+          </div>
+
+          <!-- UPI ID Copy Row -->
+          <div class="upi-copy-container">
+            <div class="upi-id-box">
+              <span class="upi-id-label">UPI ID:</span>
+              <span class="upi-id-value" id="displayUpiId">8980006309@indianbank</span>
+            </div>
+            <button type="button" class="btn-copy-upi" id="btnCopyUpi" onclick="copyUpiId()" aria-label="Copy UPI ID">
+              <span id="copyBtnIcon">📋</span> <span id="copyBtnText">Copy</span>
+            </button>
+          </div>
+
+          <!-- Mobile Direct Pay Button -->
+          <a id="btnDirectUpi" href="#" class="btn-direct-upi">
+            <span>⚡</span> Open UPI App to Pay ₹199
+          </a>
+        </div>
+
+        <!-- 3 Simple Step Instructions -->
+        <div class="instruction-box">
+          <div class="inst-heading">📌 પેમેન્ટ અને સીટ કન્ફર્મેશન માટેનાં સ્ટેપ્સ:</div>
+          <div class="inst-step">
+            <div class="inst-num">1</div>
+            <div class="inst-text">ઉપરનો <strong>QR Code સ્કેન કરો</strong> અથવા UPI ID કોપી કરીને કોઈપણ UPI એપથી <strong>₹199</strong> ચૂકવો.</div>
+          </div>
+          <div class="inst-step">
+            <div class="inst-num">2</div>
+            <div class="inst-text">પેમેન્ટ સફળ (Success) થાય એટલે તેનો <strong>Screenshot (સ્ક્રીનશોટ)</strong> પાડી લો.</div>
+          </div>
+          <div class="inst-step">
+            <div class="inst-num">3</div>
+            <div class="inst-text">નીચેના <strong>લીલા WhatsApp બટન પર ક્લિક કરો</strong>. તમારી વિગતો આપોઆપ લખાઈ જશે, ત્યાં Screenshot જોડીને <strong>8980006309</strong> પર Send કરો.</div>
+          </div>
+        </div>
+
+        <!-- Primary WhatsApp CTA -->
+        <button type="button" class="btn-whatsapp-action" onclick="sendWhatsAppConfirmation()">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.987-1.394C8.423 21.498 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.25c-1.635 0-3.153-.487-4.432-1.326l-.317-.207-2.967.83.829-2.936-.212-.338C4.015 14.939 3.5 13.518 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.5-8.5 8.5z"/>
+          </svg>
+          <span>WhatsApp પર Screenshot & વિગતો મોકલો</span>
+        </button>
+        <div style="text-align:center; margin-top:8px; font-size:12px; color:var(--ink-soft);">
+          WhatsApp સહાયતા: <b>8980006309</b> (Parth Khatra)
+        </div>
+
+        <div style="text-align:center; margin-top:12px;">
+          <button type="button" class="btn-text-back" onclick="goToStep1()">← ફરીથી વિગતો બદલવી છે? (Edit details)</button>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- Razorpay Checkout SDK -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 
   <script>
     // Global FAQ Toggle function (works seamlessly on mobile touch and desktop click)
@@ -3856,6 +4269,19 @@
 
     // Modal Open/Close (protected against mobile ghost clicks & immediate backdrop closes)
     let modalOpenedAt = 0;
+    let currentParticipant = null;
+
+    // ==========================================
+    // UPI & WhatsApp Payment Configuration
+    // ==========================================
+    const PAYMENT_CONFIG = {
+      upiId: "8980006309@indianbank", // Official Indian Bank UPI ID
+      payeeName: "Mr PARTH BHUPATBHAI KHATRA",
+      amount: "199",
+      whatsappNumber: "918980006309",
+      displayPhone: "8980006309",
+      customQrImage: "indian-bank-qr.png" // User's Indian Bank QR Code
+    };
 
     function openReserveModal(e) {
       if (e) {
@@ -3864,6 +4290,7 @@
       }
       const modal = document.getElementById('reserveModal');
       if (!modal) return;
+      goToStep1();
       modal.classList.add('open');
       modalOpenedAt = Date.now();
       document.body.style.overflow = 'hidden';
@@ -3895,22 +4322,15 @@
       }
     });
 
-    // ==========================================
-    // Razorpay Configuration (STEP 2 Integration)
-    // ==========================================
-    // Replace "YOUR_RAZORPAY_KEY_ID" with your Key ID (rzp_test_... or rzp_live_...) from Razorpay Dashboard
-    const RAZORPAY_KEY_ID = "rzp_test_TrkDv1b9kwEJ91";
-    const RAZORPAY_PAYMENT_URL = "https://rzp.io/rzp/A88gTtz7"; // Active Razorpay link fallback
-
-    // Handle Form Submission (Step 2)
+    // Step 1: Handle Participant Registration Form
     function handleRegistration(e) {
       e.preventDefault();
 
-      // 1. Get values entered by the user
       const name = document.getElementById('userName').value.trim();
       const rawPhone = document.getElementById('userPhone').value.trim();
       const email = document.getElementById('userEmail').value.trim();
-      const role = document.getElementById('userRole') ? document.getElementById('userRole').value : '';
+      const roleSelect = document.getElementById('userRole');
+      const role = roleSelect ? roleSelect.options[roleSelect.selectedIndex].text : '';
 
       // Sanitize phone number (extract last 10 digits)
       const cleanPhone = rawPhone.replace(/\D/g, '').slice(-10);
@@ -3920,76 +4340,144 @@
         return;
       }
 
-      const submitBtn = document.querySelector('.modal-submit');
-      submitBtn.textContent = 'Opening Payment...';
-      submitBtn.disabled = true;
+      currentParticipant = {
+        name,
+        phone: cleanPhone,
+        email,
+        role,
+        date: new Date().toISOString()
+      };
 
       // Store lead data locally so participant details are preserved
       try {
         const leads = JSON.parse(localStorage.getItem('mcm_leads') || '[]');
-        leads.push({ name, phone: cleanPhone, email, role, date: new Date().toISOString() });
+        leads.push(currentParticipant);
         localStorage.setItem('mcm_leads', JSON.stringify(leads));
       } catch (err) { }
 
-      // 2. Configure & launch Razorpay Checkout Popup if Key ID is provided
-      if (RAZORPAY_KEY_ID && RAZORPAY_KEY_ID.startsWith("rzp_") && typeof Razorpay !== 'undefined') {
-        const options = {
-          key: RAZORPAY_KEY_ID,
-          amount: 19900, // ₹199 in paise (199 * 100)
-          currency: "INR",
-          name: "Money Clarity Masterclass",
-          description: "Live 90 Mins Masterclass Entry Pass",
-          prefill: {
-            name: name,
-            contact: cleanPhone,
-            email: email
-          },
-          notes: {
-            profession: role,
-            masterclass_date: "01-Nov 2026 10:30 AM IST"
-          },
-          theme: {
-            color: "#0d2b24" // Matches website dark green brand color
-          },
-          modal: {
-            ondismiss: function () {
-              submitBtn.textContent = 'Proceed to Pay ₹199';
-              submitBtn.disabled = false;
-            }
-          },
-          handler: function (response) {
-            // 3. Runs immediately when payment succeeds
-            onPaymentSuccess(response, { name, phone: cleanPhone, email, role });
-          }
-        };
+      // Transition to Step 2: Show QR Code & WhatsApp Confirmation
+      showPaymentStep(currentParticipant);
+    }
 
-        const rzp = new Razorpay(options);
-        rzp.open();
-      } else {
-        submitBtn.textContent = 'Redirecting to Razorpay...';
+    // Step 2: Transition to Payment & QR screen
+    function showPaymentStep(participant) {
+      document.getElementById('modalStep1').style.display = 'none';
+      document.getElementById('modalStep2').style.display = 'block';
+
+      // Update participant summary tag
+      const summaryNameEl = document.getElementById('summaryUserName');
+      const summaryPhoneEl = document.getElementById('summaryUserPhone');
+      const displayUpiIdEl = document.getElementById('displayUpiId');
+
+      if (summaryNameEl) summaryNameEl.textContent = participant.name;
+      if (summaryPhoneEl) summaryPhoneEl.textContent = participant.phone;
+      if (displayUpiIdEl) displayUpiIdEl.textContent = PAYMENT_CONFIG.upiId;
+
+      // Standard UPI Intent URI (compatible with PhonePe, GPay, Paytm, BHIM, CRED)
+      const upiIntentUrl = `upi://pay?pa=${encodeURIComponent(PAYMENT_CONFIG.upiId)}&pn=${encodeURIComponent(PAYMENT_CONFIG.payeeName)}&am=${PAYMENT_CONFIG.amount}&cu=INR&tn=${encodeURIComponent('Money Clarity Masterclass')}`;
+
+      // Update Mobile 1-Click Pay button
+      const directBtn = document.getElementById('btnDirectUpi');
+      if (directBtn) {
+        directBtn.href = upiIntentUrl;
+      }
+
+      // Generate or load QR Code
+      const qrImg = document.getElementById('upiQrImage');
+      if (qrImg) {
+        if (PAYMENT_CONFIG.customQrImage) {
+          qrImg.src = PAYMENT_CONFIG.customQrImage;
+        } else {
+          // Dynamic high-contrast QR code for instant scanning
+          qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&margin=8&data=${encodeURIComponent(upiIntentUrl)}`;
+        }
+      }
+
+      // Scroll modal to top so user sees the instructions immediately
+      const modalContent = document.querySelector('.modal-content');
+      if (modalContent) modalContent.scrollTop = 0;
+    }
+
+    // Return to Step 1 to edit details
+    function goToStep1() {
+      const step1 = document.getElementById('modalStep1');
+      const step2 = document.getElementById('modalStep2');
+      if (step1) step1.style.display = 'block';
+      if (step2) step2.style.display = 'none';
+    }
+
+    // Copy UPI ID with visual feedback
+    function copyUpiId() {
+      const upiId = PAYMENT_CONFIG.upiId;
+      const copyBtn = document.getElementById('btnCopyUpi');
+      const iconEl = document.getElementById('copyBtnIcon');
+      const textEl = document.getElementById('copyBtnText');
+
+      function showSuccess() {
+        if (copyBtn) copyBtn.classList.add('copied');
+        if (iconEl) iconEl.textContent = '✓';
+        if (textEl) textEl.textContent = 'Copied!';
         setTimeout(() => {
-          window.location.href = RAZORPAY_PAYMENT_URL;
-        }, 200);
+          if (copyBtn) copyBtn.classList.remove('copied');
+          if (iconEl) iconEl.textContent = '📋';
+          if (textEl) textEl.textContent = 'Copy';
+        }, 2500);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(upiId).then(showSuccess).catch(() => fallbackCopy(upiId, showSuccess));
+      } else {
+        fallbackCopy(upiId, showSuccess);
       }
     }
 
-    // Step 3: Payment Success Handler
-    function onPaymentSuccess(response, userData) {
-      closeReserveModal();
-
-      alert(
-        `ધન્યવાદ ${userData.name}!\n\n` +
-        `તમારું ₹199 નું પેમેન્ટ સફળ રહ્યું છે.\n` +
-        `Payment ID: ${response.razorpay_payment_id}\n\n` +
-        `તમારા WhatsApp (${userData.phone}) અને Email (${userData.email}) પર Zoom લિંક મોકલી દેવામાં આવી છે.`
-      );
-
-      const submitBtn = document.querySelector('.modal-submit');
-      if (submitBtn) {
-        submitBtn.textContent = 'Proceed to Pay ₹199';
-        submitBtn.disabled = false;
+    function fallbackCopy(text, onSuccess) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        if (onSuccess) onSuccess();
+      } catch (e) {
+        alert('UPI ID: ' + text);
       }
-      document.getElementById('regForm').reset();
+      document.body.removeChild(ta);
+    }
+
+    // Step 3: Trigger WhatsApp with full registration details & request screenshot
+    function sendWhatsAppConfirmation() {
+      if (!currentParticipant) {
+        const name = document.getElementById('userName').value.trim() || 'ભાગ લેનાર';
+        const rawPhone = document.getElementById('userPhone').value.trim();
+        const cleanPhone = rawPhone.replace(/\D/g, '').slice(-10) || '';
+        const email = document.getElementById('userEmail').value.trim() || '';
+        const roleSelect = document.getElementById('userRole');
+        const role = roleSelect ? roleSelect.options[roleSelect.selectedIndex].text : '';
+        currentParticipant = { name, phone: cleanPhone, email, role };
+      }
+
+      const p = currentParticipant;
+      const message = 
+`નમસ્તે પાર્થભાઈ, મેં Money Clarity Masterclass માટે ₹${PAYMENT_CONFIG.amount} નું પેમેન્ટ કર્યું છે.
+
+📋 મારી રજીસ્ટ્રેશન વિગતો (Registration Details):
+• પૂરું નામ: ${p.name}
+• WhatsApp નંબર: ${p.phone}
+• Email: ${p.email}
+• વ્યવસાય: ${p.role || 'Not specified'}
+• ફી: ₹${PAYMENT_CONFIG.amount} (Masterclass - 01 Nov 2026)
+
+📎 હું આ મેસેજ સાથે મારા પેમેન્ટનો Screenshot (સ્ક્રીનશોટ) મોકલી રહ્યો/રહી છું.
+કૃપા કરીને મારી સીટ કન્ફર્મ કરી Zoom લિંક મોકલી આપશો. ધન્યવાદ!`;
+
+      const waUrl = `https://api.whatsapp.com/send?phone=${PAYMENT_CONFIG.whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+      // Open WhatsApp in new tab / official application
+      window.open(waUrl, '_blank');
     }
 
     // Live Countdown Timer
